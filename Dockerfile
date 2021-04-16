@@ -10,7 +10,7 @@ RUN set -eux; \
     rm -rf /var/lib/apt/lists/*;
 
 RUN set -eux; \
+    python -m pip install -U setuptools wheel;\
 # Install Red-DiscordBot Dashboard dependencies
     python -m pip install Red-Dashboard;
-
-CMD ["reddash"]
+CMD ["reddash", "--host='127.0.0.1'"]
