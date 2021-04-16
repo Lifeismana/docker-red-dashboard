@@ -14,7 +14,8 @@ version: "3.2"
 services:
   red-dashboard:
     container_name: red-dashboard
-    image: UPDATE WHEN I HAVE A REPO
+    image: ghcr.io/lifeismana/docker-red-dashboard:latest
     restart: unless-stopped
+    network_mode: host
 
 ```
