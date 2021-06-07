@@ -12,5 +12,5 @@ RUN set -eux; \
 RUN set -eux; \
     python -m pip install -U setuptools wheel;\
 # Install Red-DiscordBot Dashboard dependencies
-    python -m pip install git+https://github.com/Lifeismana/Red-Dashboard.git#egg=Red-Dashboard;
+    python -m pip install git+https://github.com/Lifeismana/Red-Dashboard.git\#egg=Red-Dashboard;
 CMD "reddash"
