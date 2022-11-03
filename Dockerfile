@@ -1,4 +1,4 @@
-FROM phasecorex/user-python:3.8-slim as latest
+FROM phasecorex/user-python:3.11-slim as latest
 RUN set -eux; \
 # Install Red-DiscordBot dependencies
     apt-get update; \
