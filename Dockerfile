@@ -10,7 +10,11 @@ RUN set -eux; \
     rm -rf /var/lib/apt/lists/*;
 
 RUN set -eux; \
-    python -m pip install -U setuptools wheel;\
+    # create a venv
+    python3.8 -m venv ~/reddashenv; \
+    . ~/reddashenv/bin/activate; \
+    pip install --upgrade pip; \
+    pip install -U setuptools wheel;\
 # Install Red-DiscordBot Dashboard dependencies
-    python -m pip install git+https://github.com/Lifeismana/Red-Dashboard.git\#egg=Red-Dashboard;
-CMD "reddash"
+    pip install git+https://github.com/Lifeismana/Red-Dashboard.git\#egg=Red-Dashboard;
+CMD ["bash", "-c", "source ~/reddashenv/bin/activate;reddash"]
